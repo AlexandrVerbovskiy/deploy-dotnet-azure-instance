@@ -14,9 +14,9 @@ jobs:
         - run:
             name: Build and push Docker image
             command: |
-              docker build -t dotnetcoreapi.azurecr.io/dotnet-api:latest .
+              docker build -t lab78.azurecr.io/dotnet-api:latest .
               docker login -u $DOCKER_USER -p $DOCKER_PASS lab78.azurecr.io
-              docker push dotnetcoreapi.azurecr.io/dotnet-api:latest
+              docker push lab78.azurecr.io/dotnet-api:latest
 workflows:
   build-and-deploy:
     jobs:
